@@ -1,0 +1,40 @@
+
+### Получить всех сотрудников
+GET http://localhost:8080/employees
+
+### Создать сотрудника
+POST http://localhost:8080/employees
+Content-Type: application/json
+
+{
+  "firstName": "Test",
+  "lastName": "Test",
+  "department": 1,
+  "salary": 1000
+}
+
+### Создать сотрудника 2
+POST http://localhost:8080/employees
+Content-Type: application/json
+
+{
+  "firstName": "Test2",
+  "lastName": "Test2",
+  "department": 2,
+  "salary": 10000
+}
+
+### Получить сумму зарплат по сотрудникам
+GET http://localhost:8080/employees/salary/sum
+
+### Минимальной зарплата по сторудникам
+GET http://localhost:8080/employees/salary/min
+
+### Максимальная зарплата по сотрудникам
+GET http://localhost:8080/employees/salary/max
+
+### Средняя зарплата по сотрудникам
+GET http://localhost:8080/employees/salary/average
+
+### сотрудники с зарплатой выше среднего
+GET http://localhost:8080/employees/salary/allEmployee
