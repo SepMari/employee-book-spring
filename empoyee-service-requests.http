@@ -24,6 +24,17 @@ Content-Type: application/json
   "salary": 10000
 }
 
+### Создать сотрудника 3
+POST http://localhost:8080/employees
+Content-Type: application/json
+
+{
+  "firstName": "Test3",
+  "lastName": "Test3",
+  "department": 1,
+  "salary": 100
+}
+
 ### Получить сумму зарплат по сотрудникам
 GET http://localhost:8080/employees/salary/sum
 
@@ -38,3 +49,6 @@ GET http://localhost:8080/employees/salary/average
 
 ### сотрудники с зарплатой выше среднего
 GET http://localhost:8080/employees/salary/allEmployee
+
+### Получить сотрудников по департаментам
+GET http://localhost:8080/employees/department/employees

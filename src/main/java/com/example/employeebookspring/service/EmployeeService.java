@@ -27,26 +27,26 @@ public class EmployeeService {
 
     public int getSalarySum() {
         return employees.values().stream()
-                .mapToInt(e -> e.getSalary())
+                .mapToInt(Employee::getSalary)
                 .sum();
     }
 
-    public OptionalInt getSalaryMin() {
+    public int getSalaryMin() {
         return employees.values().stream()
                 .mapToInt(Employee::getSalary)
-                .min();
+                .min().orElse(0);
     }
 
 
-    public OptionalInt getSalaryMax() {
+    public int getSalaryMax() {
         return employees.values().stream()
-                .mapToInt(e -> e.getSalary())
-                .max();
+                .mapToInt(Employee::getSalary)
+                .max().orElse(0);
     }
 
     public double getSalaryAverage() {
         return employees.values().stream()
-                .mapToInt(e -> e.getSalary())
+                .mapToInt(Employee::getSalary)
                 .average().orElse(0);
     }
 
